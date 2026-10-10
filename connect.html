@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect — Personal QuickBooks Bookkeeping Integration</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  .meta { color: #666; font-size: .9rem; margin-bottom: 2rem; }
+  ol { padding-left: 1.2rem; } li { margin: .4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ccc; color: #666; font-size: .875rem; }
+</style>
+</head>
+<body>
+<h1>Connect or Reconnect</h1>
+<p class="meta">Personal QuickBooks Bookkeeping Integration</p>
+
+<p>This is a private integration with a single operator. There is no public sign-up and no
+customer-facing application. Authorisation is performed by the operator against his own
+QuickBooks Online company file.</p>
+
+<h2>To connect</h2>
+<ol>
+  <li>Sign in to QuickBooks Online as the company administrator.</li>
+  <li>Start the OAuth 2.0 authorisation flow for the application, requesting the
+      <code>com.intuit.quickbooks.accounting</code> scope.</li>
+  <li>Approve the connection for the intended company file.</li>
+  <li>The resulting refresh token is stored in the operator's encrypted secret storage.</li>
+</ol>
+
+<h2>To reconnect</h2>
+<p>Refresh tokens rotate and eventually expire. If the connection lapses, repeat the steps
+above to obtain a new token. No other action is required.</p>
+
+<h2>Scope of access</h2>
+<p>Only accounting data is accessed, and only for company files the operator owns or is
+lawfully authorised to administer. See the <a href="privacy.html">Privacy Policy</a> for detail.</p>
+
+<p><a href="index.html">← Back</a></p>
+<footer>Not endorsed by, affiliated with, or supported by Intuit Inc.</footer>
+</body>
+</html>
